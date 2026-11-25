@@ -31,3 +31,19 @@
 .made-item:not(:last-child) {
   margin-bottom: 24px;
 }
+.made-item {
+  display: flex;
+  gap: 8px;
+}
+.made-item::before {
+  flex-shrink: 0;
+  margin-top: 5px;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #eceded;
+  background-color: #4c4c4c;
+
+  width: 8px;
+  height: 8px;
+}

@@ -70,9 +70,6 @@ img {
   max-width: 1168px;
   padding: 0 16px;
   margin: 0 auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 .logo {
@@ -104,12 +101,27 @@ img {
   height: 100%;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 10px;
+  transition: 300ms ease-in-out;
+  transition-property: border-color;
+}
+.socials-light .socials-link {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.socials-light .socials-icon {
+  color: #fff;
 }
 .socials-link:hover,
 .socials-link:focus {
-  border: 1px solid rgba(253, 146, 34, 0.1);
+  border-color: rgba(253, 146, 34, 0.1);
 }
 .socials-icon {
+  color: #111;
+  transition: 300ms ease-in-out;
+  transition-property: color;
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  color: #fd9222;
 }
 /*button*/
 .btn {
@@ -118,6 +130,8 @@ img {
   font-weight: 600;
   background-color: transparent;
   border: 1px solid transparent;
+  transition: 300ms ease-in-out;
+  transition-property: color, background-color, border-color;
 }
 .btn-filled {
   color: #fff;
@@ -126,7 +140,7 @@ img {
 .btn-filled:hover,
 .btn-filled:focus {
   color: #fd9222;
-  background: rgba(253, 146, 34, 0.1);
+  background-color: rgba(253, 146, 34, 0.1);
 }
 .btn-outlined {
 }
@@ -145,9 +159,7 @@ img {
   border-color: #fd9222;
   color: #111;
 }
-.socials-light .socials-link {
-  background-color: #fff;
-}
+
 .secondary:hover,
 .secondary:focus {
   color: #fff;
